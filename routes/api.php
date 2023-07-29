@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/contacts', [ContactController::class, 'list']);
+Route::post('/add-contacts', [ContactController::class, 'store']);
+Route::put('/update-contacts/{contact}', [ContactController::class, 'update']);
+Route::delete('/delete-contact/{contact}', [ContactController::class, 'delete']);
