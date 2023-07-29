@@ -1,7 +1,3 @@
-# Laravel 10, Vue.js 3,Tailwind and Vite Boilerplate
-
-A Laravel 10 Single Page Application boilerplate using Vue.js 3 and  Vite
-
 ### Common way
 
 Rename the .env.example file to .env, and fill it with your local info, then:
